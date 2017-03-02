@@ -4,11 +4,28 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     BluetoothAdapter BA;
+
+    public void turnBluetoothOff (View view) {
+
+        BA.disable();
+
+        if (BA.isEnabled()) {
+
+            Toast.makeText(getApplicationContext(), "Bluetooth could not be disabled", Toast.LENGTH_LONG).show();
+
+        } else {
+
+            Toast.makeText(getApplicationContext(), "Bluetooth turned off", Toast.LENGTH_LONG).show();
+            
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
