@@ -10,8 +10,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.garfield_chou.bluetoothdemo.MainActivity">
 
-    <TextView
+    <Button
+        android:text="Turn Bluetooth Off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/buttonOff"
+        android:onClick="turnBluetoothOff" />
+
+    <Button
+        android:text="Find Discoverable Devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonOff"
+        android:layout_alignParentStart="true"
+        android:id="@+id/findDiscoverableDevices" />
+
+    <Button
+        android:text="View Paired Devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/findDiscoverableDevices"
+        android:layout_alignParentStart="true"
+        android:id="@+id/viewPairedDevices" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewPairedDevices"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/pairedDevicesListView" />
 </RelativeLayout>
