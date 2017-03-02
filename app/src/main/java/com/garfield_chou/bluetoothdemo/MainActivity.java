@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void findDiscoverableDevices (View view) {
+
+        Intent i = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+        startActivity(i);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
