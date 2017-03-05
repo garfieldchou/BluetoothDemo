@@ -34,7 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/findDiscoverableDevices"
         android:layout_alignParentStart="true"
-        android:id="@+id/viewPairedDevices" />
+        android:id="@+id/viewPairedDevices"
+        android:onClick="viewPairedDevices" />
 
     <ListView
         android:layout_width="match_parent"
